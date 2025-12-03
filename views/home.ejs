@@ -6,19 +6,12 @@
     <title>home</title>
 </head>
 <body>
-
+<%- include('./partials/nav') %>
 <h1>The Green Byte Bistro</h1>
      <p> name:<%= RESTAURANT.name %></p>
      <p> adress:<%= RESTAURANT.address %></p> 
      <p> phone:<%= RESTAURANT.phone %></p>
 
-    <% RESTAURANT.menu.forEach(function(oneItem){   %>
-        <hr>
-        <p><%= oneItem.name %></p>
-        <p>BD <%= oneItem.price %></p>
-        <p><%= oneItem.rating %></p>
-        <hr>
-    
-    <% }) %>
+   
 </body>
 </html>

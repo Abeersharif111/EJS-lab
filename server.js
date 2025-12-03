@@ -56,6 +56,8 @@ const RESTAURANT = {
   ]
 }
 
+
+
 //ex1 : create the homepage
 
 //2
@@ -66,36 +68,38 @@ app.get('/',(req,res)=>{
     res.render('home.ejs',{RESTAURANT:RESTAURANT})     
 })  
 
+// Routes go here:
 
 
-//3 - 5
-/*app.get('/restaurant',(req,res)=>{   
+app.get('/menu',(req,res)=>{   
    //  console.log('RESTAURANT route')
-     res.render('resturant.ejs',{RESTAURANT:RESTAURANT})
+     res.render('menu.ejs',{menu: RESTAURANT.menu})
 
-}) */
+}) 
 
-/*
 
-app.get('/RESTAURANT/:resturant',(req,res)=>{   
+
+app.get('/menu/:category',(req,res)=>{   
    //  console.log('RESTAURAnt rout')
-     //res.render('resturant.ejs',{RESTAURANT:RESTAURANT})
+   const filteredItems = RESTAURANT.menu.filter((item)=>{
+    return item.category=== req.params.category
+   })
+     res.render('category.ejs',{menu:filteredItems})
      console.log(req.params)
 
-     const foundItem = RESTAURANT.find((oneItem)=>{
-    return oneItem === req.params
+     
     }) // this returns the student with id same as req.params.id
-     res.render('item.ejs',foundItem)
-})
+    
 
- */
+
+ 
 
 
     
 
 
 
-// Routes go here:
+
 
 
 
