@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resturant</title>
+</head>
+<body>
+    <h1>The Green Byte Bistro</h1>
+     <p> name:<%= oneItem.name %></p>
+     <p> adress:<%= oneItem.address %></p> 
+     <p> phone:<%= oneItem.phone %></p>
+
+     <% RESTAURANT.forEach(function(oneItem){   %>
+    <p> menue:<%= oneItem.menue %></p>
+    
+   <% }) %>
+</body>
+</html>
